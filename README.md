@@ -6,5 +6,5 @@
 
 Challenge link on Frontend Mentor: https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW
 
-Live demo:
+Live demo: https://todo-app-roan.vercel.app/
 
