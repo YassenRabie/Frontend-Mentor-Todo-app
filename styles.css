@@ -1,0 +1,154 @@
+body, html {
+   padding: 0;
+   margin: 0;
+   box-sizing: content-box;
+   min-height: 100vh;
+   background-color: hsl(0, 0%, 98%);
+   background-image: url('./images/bg-desktop-light.jpg');
+   background-position: top;
+   background-repeat: no-repeat;
+   background-size: contain;
+   color: hsl(235, 19%, 35%);
+   font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper {
+   width: 40vw;
+   margin: 0 auto;
+   height: 100%;
+   padding: 5rem 0;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 2.5rem 0;
+}
+
+.logo {
+   margin: 0;
+   font-size: 2.2rem;
+   color: white;
+}
+
+.new-item-form {
+   margin-bottom: 2rem;
+   border-radius: 0.25rem;
+   box-shadow: 0 0 30px rgba(72, 75, 106, 0.25);
+}
+
+input[type="text"] {
+   border: none;
+   width: 100%;
+   font-family: 'Josefin Sans', sans-serif;
+}
+
+.items-container {
+   border-radius: 0.25rem;
+   overflow: hidden;
+   background-color: white;
+   box-shadow: 0 0 30px rgba(72, 75, 106, 0.25);
+}
+
+.items-actions {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem;
+   font-size: .7rem;
+}
+
+.item {
+   background-color: white;
+   display: flex;
+   /* justify-content: center; */
+   align-items: center;
+   padding: .75rem;
+   gap: 1rem;
+}
+
+.completed {
+   text-decoration: line-through;
+}
+
+.item:hover .delete-button {
+   opacity: 1;
+}
+
+.delete-button {
+   margin-left: auto;
+   opacity: 0;
+}
+
+.active-filter {
+   color: hsl(220, 98%, 61%);
+}
+
+.items-container .item {
+   border-bottom: 1px solid hsl(233, 11%, 84%);
+   padding: 1.2rem 1rem;
+}
+
+.items-container .item:hover {
+   background-color: hsl(0, 0%, 98%);
+}
+
+button {
+   border: none;
+   color: hsl(235, 19%, 35%);
+   background-color: transparent;
+   cursor: pointer;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: .8rem;
+}
+
+button:hover {
+   color: hsl(236, 9%, 61%);
+}
+
+/* Dark Theme */
+
+body.dark {
+   background-color: hsl(235, 21%, 11%);
+   background-image: url('./images/bg-desktop-dark.jpg');
+   color: hsl(234, 39%, 85%);
+}
+
+body.dark .items-container {
+   background-color: hsl(235, 24%, 19%);
+   box-shadow: 0 0 30px hsla(0, 0%, 0%, 0.3);
+}
+
+body.dark .item {
+   background-color: hsl(235, 24%, 19%);
+   color: hsl(234, 39%, 85%);
+}
+
+body.dark .new-item-form {
+   box-shadow: 0 0 30px hsla(0, 0%, 0%, 0.3);
+}
+
+body.dark button {
+   color: hsl(234, 39%, 85%);
+}
+
+body.dark .active-filter {
+   color: hsl(220, 98%, 61%);
+}
+
+body.dark .items-container .item:hover {
+   background-color: hsl(237, 14%, 26%);
+}
+
+@media only screen and (max-width: 1048px) {
+   .wrapper {
+      width: 90vw;
+   }
+   body {
+      background-image: url('./images/bg-mobile-light.jpg');
+   }
+   body.dark {
+      background-image: url('./images/bg-mobile-dark.jpg');
+   }
+}
